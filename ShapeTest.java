@@ -3,67 +3,59 @@ package main.java.ModuleSeven.HomeWork;
 public class ShapeTest {
 
     public static void main(String[] args) {
-        Main figure = new Main();
+        Shape shape = new Shape();
 
-        //Circle
-        figure.print(new Main.Circle());
-
-        //Quad
-        figure.print(new Main.Quad());
-
-        //Qube
-        figure.print(new Main.Qube());
-
-        //Rhombus
-        figure.print(new Main.Rhombus());
-
-        //Triangle
-        figure.print(new Main.Triangle());
+        shape.print(new Circle());
+        shape.print(new Quad());
+        shape.print(new Qube());
+        shape.print(new Triangle());
     }
 }
 
-class Main {
-    static abstract class Shape {
-        abstract String getName();
+
+    class Shape {
+        String getName(){
+            return "shape";
+        }
+
+
+        public void print(Shape shape) {
+            System.out.println(shape.getName());
+        }
     }
 
-    public void print(Shape shape) {
-        System.out.println(shape.getName());
-    }
-
-     static class Circle extends Shape {
+      class Circle extends Shape {
         @Override
         String getName() {
             return "Circle";
         }
     }
 
-    static class Quad extends Shape {
+    class Quad extends Shape {
         @Override
         String getName() {
             return "Quad";
         }
     }
 
-    static class Qube extends Shape {
+    class Qube extends Shape {
         @Override
         String getName() {
             return "Qube";
         }
     }
 
-    static class Triangle extends Shape {
+    class Triangle extends Shape {
         @Override
         String getName() {
             return "Triangle";
         }
     }
-
-    static class Rhombus extends Shape {
+    class Rhombus extends Shape {
         @Override
         String getName() {
             return "Rhombus";
         }
     }
 
-}
+
