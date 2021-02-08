@@ -9,6 +9,7 @@ public class ShapeTest {
         shape.print(new Quad());
         shape.print(new Qube());
         shape.print(new Triangle());
+        shape.print(new Rhombus());
     }
 }
 
@@ -21,12 +22,9 @@ class Main {
 
     abstract class Shape {
         abstract String getName();
-
-
-
     }
 
-      class Circle extends Shape {
+    class Circle extends Shape {
         @Override
         String getName() {
             return "Circle";
